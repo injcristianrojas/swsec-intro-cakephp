@@ -30,10 +30,10 @@
 	<div id="container">
 		<div id="content">
 <?php echo $this->Session->flash(); ?>
+<p><?php echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages'); ?></p>
 <?php echo $this->fetch('content'); ?>
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
-	<p><?php echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages'); ?></p>
 </body>
 </html>
