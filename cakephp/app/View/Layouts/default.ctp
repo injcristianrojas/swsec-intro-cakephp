@@ -19,7 +19,18 @@
 	<div id="container">
 		<div id="content">
 <?php echo $this->Session->flash(); ?>
-<p><?php echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages'); ?></p>
+<p>
+	<?php
+		$user = $this->Session->read('Auth.User');
+		if(!empty($user)) {
+		    echo 'Hi ', $user['username'], ' ', $this->Html->link('Logout', '/users/logout');
+		} else {
+				echo $this->Html->link('Login', '/users/login');
+		}
+		echo '<br/>';
+		echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages');
+	?>
+</p>
 <?php echo $this->fetch('content'); ?>
 		</div>
 	</div>
