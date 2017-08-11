@@ -14,17 +14,6 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-	<style type="text/css">
-		.Praetorian {
-			font-family: sans-serif;
-			font-size: 14pt;
-			position: fixed;
-			bottom: 1%;
-			right: 1%;
-			color: black;
-			text-decoration: none;
-		}
-</style>
 </head>
 <body>
 	<div id="container">
