@@ -28,7 +28,7 @@
 				echo $this->Html->link('Login', '/users/login');
 		}
 		echo ' - ';
-		echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages');
+		echo $this->Html->link('Home', '/') . ' - ' . $this->Html->link('Messages', '/messages');
 	?>
 </p>
 <?php echo $this->fetch('content'); ?>
