@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    restart: always
+    privileged: true
+    ports:
+      - "80:80"
+    volumes:
+      - "./cakephp:/cakephp"
+      - "./nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+    depends_on:
+      - php
+      - mysql
+
+  php:
+    build: php
+    restart: always
+    privileged: true
+    volumes:
+      - "./cakephp:/cakephp"
+
+  mysql:
+    image: mysql
+    restart: always
+    privileged: true
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=dba
+      - MYSQL_DATABASE=swsec
+      - MYSQL_USER=www_user
+      - MYSQL_PASSWORD=abcde
+    volumes:
+      - "./dump.sql:/docker-entrypoint-initdb.d/dump.sql"
