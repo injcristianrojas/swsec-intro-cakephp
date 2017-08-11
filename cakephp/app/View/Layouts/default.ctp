@@ -27,7 +27,7 @@
 		} else {
 				echo $this->Html->link('Login', '/users/login');
 		}
-		echo '<br/>';
+		echo ' - ';
 		echo $this->Html->link('Go Home', '/') . ' - ' . $this->Html->link('Messages', '/messages');
 	?>
 </p>
