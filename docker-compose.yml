@@ -3,7 +3,6 @@ version: '3'
 services:
   nginx:
     image: nginx:latest
-    restart: always
     privileged: true
     ports:
       - "80:80"
@@ -16,14 +15,12 @@ services:
 
   php:
     build: php
-    restart: always
     privileged: true
     volumes:
       - "./cakephp:/cakephp"
 
   mysql:
     image: mysql
-    restart: always
     privileged: true
     ports:
       - "3306:3306"
