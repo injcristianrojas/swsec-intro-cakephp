@@ -13,4 +13,4 @@ Start the server using
 docker-compose up
 ```
 
-Then go to http://localhost and have fun.
+Then go to http://localhost:8080 and have fun.
