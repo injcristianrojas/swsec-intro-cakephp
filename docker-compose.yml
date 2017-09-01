@@ -5,7 +5,7 @@ services:
     image: nginx:latest
     privileged: true
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - "./cakephp:/cakephp"
       - "./nginx.conf:/etc/nginx/conf.d/default.conf:ro"
