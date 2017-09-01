@@ -7,6 +7,19 @@ CakePHP project, based on  [spring-swsec](https://github.com/injcristianrojas/sp
 
 # Usage
 
+First, clone the repo:
+
+```shell
+git clone https://github.com/injcristianrojas/swsec-intro-cakephp.git
+```
+
+Next, change the permissions in the temp area:
+
+```shell
+cd swsec-intro-cakephp
+chmod -R 777 cakephp/app/tmp
+```
+
 Start the server using
 
 ```shell
