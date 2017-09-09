@@ -1,1 +1,4 @@
 TORPEDO.md
+cakephp/app/tmp/cache/models/myapp*
+cakephp/app/tmp/cache/persistent/myapp*
+cakephp/app/tmp/logs/*.log
