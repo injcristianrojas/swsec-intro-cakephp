@@ -34,9 +34,12 @@ class MessagesController extends AppController {
 
   public function index() {
     if ($this->request->is('post')) {
-      $this->Message->create();
-      $data = array('message' => $this->request->data('text'));
-      $this->Message->save($data);
+      //$this->Message->create();
+      //$data = array('message' => $this->request->data('text'));
+      //$this->Message->save($data);
+      $text = $this->request->data('text');
+      $query = "INSERT INTO messages(message) VALUES ('$text')";
+      $this->Message->query($query);
     }
     $messages = $this->Message->find('all');
     $this->set('messages', $messages);
